@@ -2,10 +2,10 @@ let gulp = require('gulp'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    cssmin = require('gulp-cssmin');
+    cssmin = require('gulp-cssmin')
 
 gulp.task('sass', function(){
     return gulp.src('app/scss/**/*.scss')
@@ -39,7 +39,7 @@ gulp.task('script', function(){
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'node_modules/mixitup/dist/mixitup.js',
         'node_modules/rateyo/src/jquery.rateyo.js',
-        'node_modules/ion-rangeslider/js/ion.rangeSlider'
+        'node_modules/ion-rangeslider/js/ion.rangeSlider.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
